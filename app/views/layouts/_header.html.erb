@@ -1,0 +1,17 @@
+<header>
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <ul>
+          <li class="pure-menu-selected"><a href="#">Home</a></li>
+          <li><a href="#">Flickr</a></li>
+          <li><a href="#">Messenger</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Finance</a></li>
+          <% if not signed_in? %>
+            <li><%= link_to "login", new_user_session_path, :method => :create %></li>
+          <% else %>
+            <li><%= link_to "logout", destroy_user_session_path, :method => :delete %></li>
+          <% end %>
+      </ul>
+  </div>
+</header>
+
