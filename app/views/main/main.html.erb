@@ -9,5 +9,11 @@
       <li><%= link_to "New Project", '#'%></li>
       <li><%= link_to "My Page", '#' %></li>
     </ul>
+    <div class = "search-project">
+      <%= form_tag root_path, :method=> :get do %>
+        <%= text_field :search, :label, "placeholder" => "검색어를 입력하세요"%>
+      <% end %>
+    </div>
   </ariticle>
+
 </section>
