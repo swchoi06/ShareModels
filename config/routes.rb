@@ -1,5 +1,8 @@
 Share::Application.routes.draw do
-  root to: "models#index"
+  root to: "main#main"
+  get "home" => "home#home"
+
+  # Devise setting for User
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
 #
@@ -8,8 +11,6 @@ Share::Application.routes.draw do
 #  end
 #
   resources :models
-  get "models/index"
-  get "models/show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
