@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222101449) do
+ActiveRecord::Schema.define(version: 20140304165116) do
+
+  create_table "keywords", force: true do |t|
+    t.string  "keyword"
+    t.integer "model_id"
+  end
+
+  create_table "models", force: true do |t|
+    t.integer  "parent_model_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
