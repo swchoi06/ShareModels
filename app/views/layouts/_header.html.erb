@@ -1,11 +1,11 @@
 <header>
   <div class="pure-menu pure-menu-open pure-menu-horizontal">
+      <a href="#" class="pure-menu-heading"> <%= image_tag("logo.jpg", size:"30", alt: "Moved") %> </a>
+
       <ul>
-          <li class="pure-menu-selected"><a href="#">Home</a></li>
-          <li><a href="#">Flickr</a></li>
-          <li><a href="#">Messenger</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Finance</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Create</a></li>
           <% if not signed_in? %>
             <li><%= link_to "login", new_user_session_path, :method => :create %></li>
           <% else %>
