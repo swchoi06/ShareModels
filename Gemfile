@@ -13,6 +13,9 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 
+# Use Foundation Framework
+gem 'foundation-rails'
+
 # Use Devise for login
 gem 'devise'
 gem 'omniauth-facebook'
