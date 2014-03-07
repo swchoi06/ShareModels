@@ -3,11 +3,11 @@
   <head>
     <title>Share</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 
     <!-- Link Pure CSS from purecss.io -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css"> 
+
   </head>
   <body>
     <% if content_for?(:main) %>
@@ -17,5 +17,7 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
     <% end %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

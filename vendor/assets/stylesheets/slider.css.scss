@@ -1,0 +1,81 @@
+/* Webfont link */
+@import url(http://fonts.googleapis.com/css?family=Unica+One);
+$font-stack: 'Unica One', sans-serif;
+
+/* Plugin base styles */
+
+.slider { 
+  position: relative;
+  width: 100%; 
+  overflow: hidden; 
+  font-family: $font-stack;
+}
+
+.slides { 
+  position: relative;
+  padding: 0;
+  list-style: none;
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-size: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+
+  li { 
+    display: inline-block; 
+    -webkit-backface-visibility: hidden;
+    
+    img {
+      width: 100%; 
+      height: auto;
+    }
+  }
+}
+
+
+
+/* Non-plugin styles */
+
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+
+body { 
+  position: relative;
+  width: 90%;
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.slide-nav { 
+  position: absolute; 
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+
+  ul {
+    letter-spacing: 0;
+    word-spacing: 0;
+    font-size: 0;
+  }
+  
+  li { 
+    display: inline-block; 
+
+    a{
+      display: block;
+      color: #444;
+      background: #FFF;
+      text-decoration: none;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      font-size: 12px;
+      text-align: center;
+      margin: 0 0 0 6px;
+    }
+    a.active { color: #DEBB1E; }
+  }
+}
