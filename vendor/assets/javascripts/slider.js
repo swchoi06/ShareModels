@@ -26,6 +26,9 @@
       
       // Add active class to first nav link
       navLink.first().addClass('active');    
+
+      // Reveal images
+      slide.css({'display' : 'inline-block'})
       
       // Auto play function (if selected options)
       if ( options.autoPlay === true ) {          
